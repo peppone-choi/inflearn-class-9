@@ -1,10 +1,10 @@
 import React from "react";
 
-function Button({ value, isSubmit = false, onClick }) {
+const Button = React.memo(({ value, isSubmit = false, onClick }) => {
   return (
     <div>
       <button
-        className="m-3 flex flex-col w-28 h-12 border justify-center items-center bg-slate-100 hover:bg-gray-500 hover:text-white rounded text-black shadow"
+        className="flex flex-col items-center justify-center h-12 m-3 text-black border rounded shadow w-28 bg-slate-100 hover:bg-gray-500 hover:text-white"
         type={isSubmit ? "submit" : "button"}
         onClick={onClick}
       >
@@ -12,6 +12,6 @@ function Button({ value, isSubmit = false, onClick }) {
       </button>
     </div>
   );
-}
+});
 
 export default Button;

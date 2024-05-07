@@ -1,7 +1,7 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-export default function Lists({ list, onDeleteClick, setList, setTotal, total, setSubject, setAmount }) {
+const Lists = React.memo(({ list, onDeleteClick, setList, setTotal, total, setSubject, setAmount }) => {
   return (
     <div className="w-full">
       {list.map((item) => (
@@ -21,4 +21,6 @@ export default function Lists({ list, onDeleteClick, setList, setTotal, total, s
       ))}
     </div>
   );
-}
+});
+
+export default Lists;
