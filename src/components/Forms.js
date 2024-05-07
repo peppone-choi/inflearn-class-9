@@ -10,7 +10,7 @@ function Forms({ subject, amount, handleChange, handleAmountChange, onSubmit }) 
           <Input label="지출 항목" placeholder="예) 렌트비" value={subject} onChange={handleChange} />
           <Input label="비용" value={amount} onChange={handleAmountChange} />
         </div>
-        <Button value="제출" />
+        <Button value="제출" isSubmit={true} />
       </form>
     </div>
   );
